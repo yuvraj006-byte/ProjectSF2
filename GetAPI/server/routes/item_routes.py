@@ -29,3 +29,7 @@ def get_items_by_type(item_type):
     finally:
         if conn:
             conn.close()
+
+
+
+

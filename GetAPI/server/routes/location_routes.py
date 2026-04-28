@@ -32,7 +32,6 @@ def get_nations():
         if conn:
             conn.close()
 
-
 # Nested route: nations belonging to a specific empire
 @location_bp.route("/empire/<int:empire_id>/nation", methods=["GET"])
 def get_nations_by_empire(empire_id):

@@ -19,7 +19,6 @@ def get_players():
         if conn:
             conn.close()
 
-
 @player_bp.route("/players/<int:player_id>", methods=["GET"])
 def get_player(player_id):
     conn = None
