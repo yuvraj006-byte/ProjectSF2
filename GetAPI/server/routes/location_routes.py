@@ -1,5 +1,5 @@
 from flask import Blueprint, jsonify
-from database.db import db_conn
+from server.database.db import db_conn
 from server.services.location_service import (
     get_empire as fetch_empire,
     get_nation as fetch_nation,
