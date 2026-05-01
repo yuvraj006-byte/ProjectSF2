@@ -9,6 +9,7 @@ from server.routes.enemy_drop_routes import enemy_drop_bp
 from server.routes.player_routes import player_bp
 from server.routes.quest_routes import quest_bp
 from server.routes.score_routes import score_bp
+from server.routes.equipment_routes import equipment_bp
 
 app = Flask(
     __name__,
@@ -31,4 +32,5 @@ app.register_blueprint(enemy_drop_bp)
 app.register_blueprint(player_bp)
 app.register_blueprint(quest_bp)
 app.register_blueprint(score_bp)
+app.register_blueprint(equipment_bp)
 
