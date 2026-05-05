@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Character</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='character/styles.css') }}" />
+    <script src="{{ url_for('static', filename='character/script.js') }}" defer></script>
+</head>
+
+<body>
+
+    <div class="login-box">
+
+        <!-- MENU -->
+        <div id="menuView">
+            <h2>Welcome, Wanderer</h2>
+
+            <button id="createCharBtn" class="menu-btn">
+                Create Your Character
+            </button>
+
+        </div>
+
+        <!-- CHARACTER CREATION -->
+        <div id="charView" style="display:none;">
+            <h2>Let's Create Your Character</h2>
+
+            <label for="charName">Character Name</label>
+            <input id="charName" type="text" placeholder="e.g. Aric the Bold" />
+
+            <button id="startCharBtn" class="menu-btn">
+                Begin Journey
+            </button>
+
+            <button id="cancelBtn" class="menu-btn secondary">
+                Back
+            </button>
+
+        </div>
+        <div id="locationView">
+            <h3>Choose Your Starting Location</h3>
+
+            <button class="location-btn" data-empire="mustafar" data-route="/Mustafar">
+                Mustafar
+            </button>
+
+            <button class="location-btn" data-empire="kamino" data-route="/Kamino">
+                Kamino
+            </button>
+
+            <button class="location-btn" data-empire="genosis" data-route="/Genosis">
+                Genosis
+            </button>
+
+            <button class="location-btn" data-empire="nepotis" data-route="/Nepotis">
+                Nepotis
+            </button>
+        </div>
+
+    </div>
+
+    <script>
+
+    </script>
+
+</body>
+
+</html>

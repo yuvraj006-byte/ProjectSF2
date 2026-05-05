@@ -1,0 +1,100 @@
+/* ===== MAP MODAL OVERLAY ===== */
+.map-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+/* modal box (actual map container) */
+.map-box {
+  width: 60vw; /* was 80vw */
+  height: 80vh;
+  background: var(--box);
+  border: 1px solid rgba(201, 168, 76, 0.3);
+  box-shadow: 0 20px 80px rgba(0, 0, 0, 0.8);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* map fills modal */
+#mapContainer {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+#mapCanvas {
+  width: 100%;
+  height: 100%;
+}
+
+/* back button stays inside modal */
+.map-controls {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 8px;
+  z-index: 20;
+}
+.map-controls button {
+  background: var(--box);
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  cursor: pointer;
+  font-family: "Cinzel", serif;
+  transition: 0.2s ease;
+}
+
+/* Close button (X) */
+.close-btn {
+  width: 36px;
+  height: 36px;
+  font-size: 1.2rem;
+  line-height: 1;
+  padding: 0;
+}
+
+/* Back button slightly smaller */
+#backBtn {
+  width: 36px;
+  height: 36px;
+  font-size: 1rem;
+  margin-top: 0.3rem;
+}
+
+.map-controls button:hover {
+  background: rgba(201, 168, 76, 0.15);
+  color: var(--gold-bright);
+}
+
+#transitionScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 2rem;
+  z-index: 9999;
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition: opacity 0.6s ease;
+}
+
+#transitionScreen.active {
+  opacity: 1;
+  pointer-events: all;
+}

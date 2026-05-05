@@ -1,0 +1,93 @@
+:root {
+  --gold: #c9a84c;
+  --gold-bright: #f0d060;
+  --blood: #8b0000;
+  --bg: #0d0b08;
+  --box: #110e0a;
+  --text: #e8dcc8;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Cinzel", serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.login-box {
+  width: 350px;
+  padding: 2rem;
+  background: var(--box);
+  border: 1px solid rgba(201, 168, 76, 0.25);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+  text-align: center;
+}
+
+h2 {
+  color: var(--gold-bright);
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.05em;
+}
+
+label {
+  display: block;
+  text-align: left;
+  margin-bottom: 0.5rem;
+  color: var(--gold);
+}
+
+input {
+  width: 100%;
+  padding: 0.7rem;
+  margin-bottom: 1.5rem;
+  background: #0b0907;
+  border: 1px solid rgba(201, 168, 76, 0.3);
+  color: var(--text);
+  font-family: inherit;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--gold-bright);
+}
+
+button {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background: var(--blood);
+  color: var(--gold-bright);
+  border: 1px solid rgba(201, 168, 76, 0.4);
+  cursor: pointer;
+  letter-spacing: 0.1em;
+  font-family: inherit;
+}
+
+button:hover {
+  background: #a00000;
+}
+
+button.secondary {
+  background: transparent;
+  border: 1px solid rgba(201, 168, 76, 0.3);
+}
+
+button.secondary:hover {
+  background: rgba(201, 168, 76, 0.08);
+}
+
+.back {
+  display: block;
+  margin-top: 1rem;
+  color: var(--gold);
+  text-decoration: none;
+}
+
+#locationView {
+  display: none;
+  margin-top: 20px;
+}

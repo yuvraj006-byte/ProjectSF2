@@ -1,0 +1,78 @@
+:root {
+  --gold: #c9a84c;
+  --gold-bright: #f0d060;
+  --blood: #8b0000;
+  --bg: #0d0b08;
+  --box: #110e0a;
+  --text: #e8dcc8;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Cinzel", serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.register-box {
+  background: var(--box);
+  border: 1px solid rgba(201, 168, 76, 0.3);
+  padding: 2.5rem;
+  width: 380px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
+}
+
+h2 {
+  text-align: center;
+  color: var(--gold);
+  font-family: "Cinzel Decorative", serif;
+  margin-bottom: 1.5rem;
+}
+
+label {
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  color: #a89880;
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+input {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1.2rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(201, 168, 76, 0.2);
+  color: white;
+  outline: none;
+}
+
+input:focus {
+  border-color: var(--gold);
+}
+
+#submit {
+  width: 100%;
+  padding: 1rem;
+  background: var(--blood);
+  color: var(--gold-bright);
+  border: 1px solid rgba(201, 168, 76, 0.4);
+  cursor: pointer;
+  letter-spacing: 0.1em;
+}
+
+#submit:hover {
+  background: #a00000;
+}
+
+.back {
+  display: block;
+  text-align: center;
+  margin-top: 1rem;
+  color: var(--gold);
+  text-decoration: none;
+}

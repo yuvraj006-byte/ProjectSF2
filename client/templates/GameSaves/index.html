@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Select World</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='gameSaves/styles.css') }}" />
+    <script type="module" src="{{ url_for('static', filename='gameSaves/script.js') }}" defer></script>
+</head>
+
+<body>
+
+    <div class="login-box">
+
+        <!-- MENU -->
+        <div id="menuView">
+            <h2>Choose Your Fate</h2>
+
+            <button id="newWorldBtn" class="menu-btn">
+                Start New World
+            </button>
+
+
+
+            <a class="back" href="/">Log Out</a>
+        </div>
+
+        <!-- NEW WORLD FORM -->
+        <div id="newWorldView" style="display:none;">
+            <h2>Name Your World</h2>
+
+            <label for="worldName">World Name</label>
+            <input id="worldName" type="text" placeholder="e.g. Eldoria" />
+
+            <button id="startWorldBtn" class="menu-btn">
+                Start
+            </button>
+
+            <button id="cancelBtn" class="menu-btn secondary">
+                Back
+            </button>
+        </div>
+
+    </div>
+
+
+
+</body>
+
+</html>

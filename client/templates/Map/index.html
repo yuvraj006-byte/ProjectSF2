@@ -1,0 +1,41 @@
+{% extends "index.html" %}
+<!-- ================= -->
+{% block title %} Map {% endblock %}
+<!-- ================= -->
+{% block extra_head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='map/styles.css') }}" />
+{% endblock %}
+<!-- ================= -->
+{% block navBar %} {% endblock %}
+{% block sidebar %} {% endblock %}
+
+{% block content %}
+
+<div id="mapModal" class="map-modal open">
+  <div class="map-box">
+
+    <div class="map-controls">
+      <button id="closeMap" class="close-btn">&times;</button>
+      <button id="backBtn">&#x21A9;</button>
+    </div>
+
+    <div id="mapContainer">
+      <canvas id="mapCanvas"></canvas>
+    </div>
+  </div>
+</div>
+
+<div id="transitionScreen">
+  <div id="transitionText">Travelling...</div>
+  <canvas id="transitionCanvas"></canvas>
+</div>
+
+{% endblock %}
+
+<!-- ================= -->
+{% block extra_scripts %}
+<script>
+  window.INITIAL_MAP = "{{ empire|default('main') }}";
+</script>
+<script type="module" src="{{ url_for('static', filename='map/script.js') }}"></script>
+{% endblock %}

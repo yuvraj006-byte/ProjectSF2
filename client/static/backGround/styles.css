@@ -1,0 +1,244 @@
+#gameCanvas {
+  position: absolute;
+  width: 850px;
+  height: 720px;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+#openMap,
+#closbtn {
+  top: 10px;
+  left: 10px;
+
+  z-index: 1000;
+
+  cursor: pointer;
+}
+
+/* ===== LEFT SIDEBAR ===== */
+.sidebar {
+  position: fixed;
+
+  height: 100%;
+
+  background: rgba(17, 14, 10, 0.95);
+  border-right: 1px solid rgba(201, 168, 76, 0.25);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  align-items: flex-start;
+  padding-top: 2rem;
+  gap: 12px;
+  box-shadow: 10px 0 30px rgba(0, 0, 0, 0.6);
+}
+.right {
+  right: 0;
+  width: 300px;
+}
+
+.left {
+  left: 0;
+  width: 300px;
+}
+.sidebarContent {
+  margin-top: 70px;
+  display: flex;
+  margin-left: 60px;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+/* Sidebar button styling */
+.sidebar button {
+  width: 140px;
+  padding: 0.8rem;
+  margin-bottom: 12px;
+  background: transparent;
+  border: 1px solid rgba(201, 168, 76, 0.4);
+  color: var(--gold);
+  font-family: "Cinzel", serif;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.sidebar button:hover {
+  background: rgba(201, 168, 76, 0.1);
+  color: var(--gold-bright);
+  border-color: var(--gold-bright);
+}
+
+/* ===== MODAL OVERLAY ===== */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: rgba(10, 8, 5, 0.85);
+  backdrop-filter: blur(4px);
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 2000;
+}
+
+/* ===== MODAL CONTENT ===== */
+.modal-content {
+  width: 400px;
+  padding: 1.5rem;
+
+  background: rgba(17, 14, 10, 0.95);
+  border: 1px solid rgba(201, 168, 76, 0.3);
+
+  color: var(--gold);
+  font-family: "Cinzel", serif;
+  letter-spacing: 0.05em;
+
+  box-shadow:
+    0 0 25px rgba(0, 0, 0, 0.8),
+    0 0 10px rgba(201, 168, 76, 0.2);
+
+  text-align: center;
+}
+
+/* Optional: buttons inside modal */
+.modal-content button {
+  margin-top: 1rem;
+  padding: 0.6rem 1rem;
+
+  background: transparent;
+  border: 1px solid rgba(201, 168, 76, 0.4);
+
+  color: var(--gold);
+  font-family: "Cinzel", serif;
+  letter-spacing: 0.1em;
+
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.modal-content button:hover {
+  background: rgba(201, 168, 76, 0.1);
+  color: var(--gold-bright);
+  border-color: var(--gold-bright);
+}
+table {
+  border-collapse: collapse;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 6px 10px;
+}
+th {
+  text-align: left;
+}
+/* ===== HEALTH BAR CONTAINER ===== */
+#healthBarContainer {
+  width: 100%;
+  height: 22px;
+  background: #444;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+/* ===== ACTUAL HEALTH BAR ===== */
+#healthBar {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, #4caf50, #81c784);
+  transition:
+    width 0.4s ease,
+    background 0.3s ease;
+}
+
+/* ===== HEALTH TEXT ===== */
+#healthText {
+  font-size: 13px;
+  text-align: right;
+  color: #ccc;
+}
+
+#questModalQuest {
+  display: none; /* hidden by default */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(13, 11, 8, 0.85); /* smoky overlay */
+}
+
+/* Modal box */
+#questModalQuest .modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60%;
+  height: 60%;
+  transform: translate(-50%, -50%);
+
+  background: linear-gradient(145deg, var(--stone), var(--ash));
+  border: 2px solid var(--gold);
+  border-radius: 10px;
+  box-shadow:
+    0 0 20px var(--ember),
+    inset 0 0 10px var(--smoke);
+
+  color: var(--text-light);
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* Close button */
+#closeModalQuest {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  cursor: pointer;
+  color: var(--fire-bright);
+  transition: 0.2s ease;
+}
+
+#closeModalQuest:hover {
+  color: var(--ember);
+  text-shadow: 0 0 8px var(--fire);
+}
+
+/* Modal body content */
+#modalBodyQuest {
+  margin-top: 40px;
+  color: var(--text-dim);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Optional scrollbar styling */
+#questModalQuest .modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+#questModalQuest .modal-content::-webkit-scrollbar-thumb {
+  background: var(--gold);
+  border-radius: 4px;
+}
+
+#questModalQuest .modal-content::-webkit-scrollbar-track {
+  background: var(--stone-light);
+}

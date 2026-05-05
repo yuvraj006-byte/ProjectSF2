@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="/static/favicon.ico" />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;600;700&family=IM+Fell+English:ital@0;1&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+  <script type="module" src="{{ url_for('static', filename='script.js') }}" defer></script>
+
+  <title>{% block title %}Index{% endblock %}</title>
+  {% block extra_head %}{% endblock %}
+</head>
+
+<body>
+
+  {% block navBar %}
+
+
+  <nav>
+    <div class="nav-logo" id="home">⚔ Demonic Invasion</div>
+    <ul class="nav-links">
+      <li><a href="#features">Features</a></li>
+      <li><a href="#tech">Tech</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a id="register">register</a></li>
+
+    </ul>
+  </nav>
+  {% endblock %}
+
+  <div id="pageContent">
+
+    {% block content %}
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-icon">⚔</div>
+
+      <h1 class="hero-title">Demonic<br>Invasion</h1>
+
+      <div class="hero-divider"><span>✦</span></div>
+
+      <p class="hero-subtitle">
+        A 2D action game where you fight through hordes of demonic creatures to save the world from an evil invasion.
+      </p>
+
+      <div class="hero-ctas">
+        <button class="btn-primary" id="enterBattleBtn">
+          ⚔ Enter the Battle
+        </button>
+        <a href="#features" class="btn-secondary">Learn More</a>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features" id="features">
+      <div class="section-header">
+        <div class="section-label">Arsenal</div>
+        <h2 class="section-title">Game Features</h2>
+        <div class="section-rule"><span>✦</span></div>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-name">Combat System</div>
+          <p class="feature-desc">Fluid, responsive combat with combos, dodges, and special attacks.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-name">Enemy</div>
+          <p class="feature-desc">Intelligent enemies that adapt to your playstyle.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-name">Character States</div>
+          <p class="feature-desc">Dynamic animations for every action state.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-name">Save System</div>
+          <p class="feature-desc">Persistent progress saving system.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECH -->
+    <section class="tech" id="tech">
+      <div class="section-header">
+        <div class="section-label">Under the Hood</div>
+        <h2 class="section-title">Technical Stack</h2>
+        <div class="section-rule"><span>✦</span></div>
+      </div>
+
+      <div class="tech-grid">
+        <div class="tech-card">HTML · CSS</div>
+        <div class="tech-card">JAVASCRIPT CANVAS</div>
+        <div class="tech-card">Python</div>
+        <div class="tech-card">FLASK SERVER</div>
+        <div class="tech-card">MARIA DB</div>
+      </div>
+    </section>
+
+    <!-- TEAM -->
+    <section class="team" id="team">
+      <div class="section-header">
+        <div class="section-label">The Forge</div>
+        <h2 class="section-title">Developed By</h2>
+        <div class="section-rule"><span>✦</span></div>
+      </div>
+
+      <div class="team-cards">
+        <div class="team-card">Yuvraj</div>
+        <div class="team-card">Hassan</div>
+        <div class="team-card">Akram</div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-logo">⚔ Demonic Invasion</div>
+      <p class="footer-text">Crafted in the fires of ambition · 2026</p>
+    </footer>
+
+    {% endblock %}
+
+  </div>
+
+  {% block sidebar %}
+  {% block map_sidebar %}
+  {% endblock %}
+  {% endblock %}
+
+  {% block extra_scripts %}
+
+  {% endblock %}
+
+</body>
+
+</html>

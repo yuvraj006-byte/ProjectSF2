@@ -1,0 +1,39 @@
+{% extends "index.html" %}
+<!-- ================= -->
+{% block title %} Map {% endblock %}
+<!-- ================= -->
+{% block extra_head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='login/styles.css') }}" />
+{% endblock %}
+{% block sidebar %} {% endblock %}
+<!-- ================= -->
+{% block auth_buttons %}{% endblock %} {% block content %}
+<div class="login-box">
+  <h2>Enter the Realm</h2>
+
+  <form id="loginForm">
+    <label>Warrior Name</label>
+    <input type="text" name="username" autocomplete="username" required />
+
+    <label>Password</label>
+    <input type="password" name="password" autocomplete="current-password" required minlength="4" />
+
+    <button id="submit" type="submit">⚔ Enter the Battle</button>
+  </form>
+
+  <a href="/" class="back">← Go Back</a>
+</div>
+<div id="errorBox" class="error-box hidden">
+  <p id="errorText"></p>
+
+  <div class="error-actions">
+    <button id="retryBtn" type="button">Retry</button>
+    <button id="registerBtn" type="button">Register</button>
+  </div>
+</div>
+{% endblock %}
+
+<!-- ================= -->
+{% block extra_scripts %}
+<script type="module" src="{{ url_for('static', filename='login/script.js') }}"></script>
+{% endblock %}

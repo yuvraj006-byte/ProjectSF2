@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>You Win</title>
+
+    <style>
+        :root {
+            --fire: #ff6b00;
+            --fire-bright: #ffaa00;
+            --ember: #ff3300;
+            --blood: #8b0000;
+            --gold: #c9a84c;
+            --gold-bright: #f0d060;
+            --stone: #2a2420;
+            --stone-light: #3d3530;
+            --ash: #1a1510;
+            --smoke: #0d0b08;
+            --text-light: #e8dcc8;
+            --text-dim: #a89880;
+            --ice-blue: #4aa8d8;
+        }
+
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: radial-gradient(circle at center, var(--stone-light), var(--smoke));
+            color: var(--text-light);
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            text-align: center;
+            padding: 40px;
+            border: 2px solid var(--gold);
+            background: var(--stone);
+            box-shadow: 0 0 25px var(--gold-bright);
+            border-radius: 12px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--gold-bright);
+            text-shadow: 0 0 12px var(--gold);
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: var(--text-dim);
+            margin-bottom: 20px;
+        }
+
+        button {
+            background: var(--gold);
+            color: var(--stone);
+            border: none;
+            padding: 12px 24px;
+            font-size: 1rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.2s;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: var(--gold-bright);
+            box-shadow: 0 0 10px var(--gold-bright);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>YOU WIN!</h1>
+        <p>Victory is yours. The realm is saved.</p>
+        <button onclick="location.href='/'">Home</button>
+    </div>
+</body>
+
+</html>

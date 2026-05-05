@@ -1,0 +1,107 @@
+{% extends "index.html" %}
+<!-- ================= -->
+{% block title %} {{ nation.name }} {% endblock %}
+<!-- ================= -->
+{% block extra_head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='backGround/styles.css') }}" />
+{% endblock %}
+<!-- ================= -->
+{% block navBar %} {% endblock %}
+
+{% block sidebar %}
+<aside class="sidebar left">
+  <div class="sidebarContent">
+
+    <button id="openMap">Open Map</button>
+    <button id="statsBtn">Stats</button>
+
+
+
+    <div id="statsModal" class="modal">
+      <div class="modal-content">
+        <h2>Character Stats</h2>
+        <table>
+          <tr>
+            <th>Name</th>
+            <td id="c_name"></td>
+          </tr>
+          <tr style="display: none;">
+            <th>HP</th>
+            <td id="c_hp"></td>
+          </tr>
+          <tr>
+            <th>Max HP</th>
+            <td id="c_max_hp"></td>
+          </tr>
+          <tr>
+            <th>Attack</th>
+            <td id="c_attack"></td>
+          </tr>
+          <tr>
+            <th>Defense</th>
+            <td id="c_defense"></td>
+          </tr>
+
+
+          <tr>
+            <th>Location</th>
+            <td id="c_location"></td>
+          </tr>
+        </table>
+        <button id="closeStats">Close</button>
+      </div>
+    </div>
+    <!-- Modal -->
+
+
+    {% block map_sidebar %}
+    {% endblock %}
+
+  </div>
+</aside>
+<aside class="sidebar right">
+  <div class="sidebarContent">
+    <ul>
+      <li>Kills: <span id="killCount">0</span></li>
+      <li><span id="killmsg"></span>
+      </li>
+    </ul>
+    <div id="healthBarContainer">
+      <div id="healthBar"></div>
+    </div>
+    <div id="healthText"></div>
+  </div>
+
+  <div id="questModalQuest">
+    <div class="modal-content">
+      <span id="closeModalQuest">&times;</span>
+      <div id="modalBodyQuest"></div>
+    </div>
+  </div>
+
+
+  <button id="showQuestsBtn">Show Quests</button>
+
+
+
+</aside>
+{% endblock %}
+{% block content %}
+
+<body data-empire="{{ empire }}">
+  <canvas id="gameCanvas"></canvas>
+  <div id="transitionScreen" class="active">
+
+  </div>
+
+
+</body>
+
+
+{% endblock %}
+<!-- ================= -->
+{% block extra_scripts %}
+<script type="module" src="{{ url_for('static', filename='main.js') }}"></script>
+<script type="module" src="{{ url_for('static', filename='backGround/script.js') }}"></script>
+<script type="module" src="{{ url_for('static', filename='quest/script.js') }}" defer></script>
+{% endblock %}
