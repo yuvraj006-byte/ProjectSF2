@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Get API Branch
 
 # git add folder_name
@@ -22,8 +21,3 @@
 # DB_PASSWORD=
 
 # DB_NAME=
-=======
-# ProjectSF2
-
-# First Commit!
->>>>>>> 52c80d117540bb5f795eed7a260b28422ea078a7
